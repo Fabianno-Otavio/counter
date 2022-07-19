@@ -11,14 +11,13 @@ function contar(){
     } else {
     if(inicio.value>fim.value){
         for(var i = Number(inicio.value);i>=Number(fim.value);i-=Number(passo.value)){
-        res.innerHTML+= `${i} `
-        console.log(i)
+        res.innerHTML+= ` ${i} \u{1F449}`
         }
     } else {
     for(var i = Number(inicio.value);i<=Number(fim.value);i+=Number(passo.value)){
-        res.innerHTML+= `${i} `
-        console.log(i)
+        res.innerHTML+= ` ${i} \u{1F449}`
     }
     }
+    res.innerHTML+= ` \u{1F3C1}`
     }
 }
