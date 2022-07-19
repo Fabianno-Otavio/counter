@@ -4,8 +4,21 @@ function contar(){
     var passo = document.getElementById('passo')
     var res = document.getElementById('res')
     res.innerHTML=''
-    for(var i = Number(inicio.value);i<=fim.value;i+=Number(passo.value)){
+    if(passo.value == 0){
+        res.innerHTML='Digite o passo.'
+    } else if(inicio.value == '' || fim.value == ''){
+        res.innerHTML='Impossível contar. Digite algum valor.'
+    } else {
+    if(inicio.value>fim.value){
+        for(var i = Number(inicio.value);i>=Number(fim.value);i-=Number(passo.value)){
         res.innerHTML+= `${i} `
         console.log(i)
+        }
+    } else {
+    for(var i = Number(inicio.value);i<=Number(fim.value);i+=Number(passo.value)){
+        res.innerHTML+= `${i} `
+        console.log(i)
+    }
+    }
     }
 }
